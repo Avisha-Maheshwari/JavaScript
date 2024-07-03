@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONTEND-U</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #counting{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="mybutton"><i class="fa-solid fa-thumbs-up"></i></button>
+        <span id="counting">0</span>
+    </div>
+    
+    <script>
+    
+    
+        
+        let counter=0;
+        function incrementFunction(){
+            counter=counter+1;
+            console.log(counter);
+            countOnHtml.textContent=counter
+        }
+        let element=document.querySelector("#mybutton");
+        let countOnHtml=document.querySelector("#counting")
+
+        element.addEventListener("click",incrementFunction)
+
+    
+    
+    </script>
+</body>
+</html>
