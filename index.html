@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">This is my Heading tag</h1>
+    <button id="Red">Red</button>
+    <button id="Purple">Purple</button>
+    <button id="uppercase">uppercase</button>
+    <button id="lowercase">lowercase</button>
+    <button id="font">FontSize</button>
+    
+    
+    <script>
+      document.getElementById("Red").onclick=function(){
+        document.getElementById("h").style.color="red"
+      }
+
+      document.getElementById("Purple").onclick=function(){
+        document.getElementById("h").style.color="Purple"
+      }
+
+      document.getElementById("uppercase").onclick=function(){
+        document.getElementById("h").style.textTransform="uppercase"
+      }
+
+      document.getElementById("lowercase").onclick=function(){
+        document.getElementById("h").style.textTransform="lowercase"
+      }
+
+      let counter=10
+      document.getElementById("font").onclick=function(){
+        counter++
+        document.getElementById("h").style.fontSize= counter + "px"
+      }
+    </script>
+</body>
+</html>
+
+
+
+
+
