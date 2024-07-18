@@ -18,7 +18,7 @@
             display: flex;
             flex-direction: column;
             background-color: black;
-            height: 600px;
+            /* height: 600px; */
             width: 400px;
             margin-left: 500px;
             margin-top: 30px;
@@ -28,58 +28,114 @@
             border-radius: 30px;
         }
         .screen{
-            background-color: bisque;
-            width: 90%;
-            height: 20%;
-            margin: 4px;
-            border-radius: 30px;
+            background-color: azure;
+            width: 88%;
+            height: 90px;
+            /* margin:4px; */
+            margin-top: 15px;
+            border-radius: 20px;
         }
         .operators{
             display: flex;
             flex-wrap: wrap;
-            background-color: aliceblue;
+            /* background-color: aliceblue; */
             width: 90%;
-            height: 70%;
+            /* height: 70%; */
             margin: 4px;
             border-radius: 30px;
             padding: 7px;
+            justify-content: center;
+            justify-content: space-evenly;
 
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+        .box2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+        .box3{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+        .btn{
+            width: 70px;
+            height: 70px;
+            font-size: large;
+            border-radius: 10px;
+            margin: 2px;
+        }
+        .last{
+            width: 70px;
+            height: 80px;
+            font-size: large;
+            border-radius: 10px;
+        }
+        #inc{
+            height: 100px;
+        }
+        #inp{
+            height:100%;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="screen"></div>
+        <div class="screen">
+            <input type="number" id="inp" disabled>
+        </div>
         <div class="operators">
                 <div class="box">
-                    <button class="btn">+</button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
+                    <button class="btn">AC</button>
+                    <button class="btn">7</button>
+                    <button class="btn">4</button>
+                    <button class="btn">1</button>
+                    <button class="btn">0</button>
                 </div>
-                <div class="box">
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
+                <div class="box1">
+                    <button class="btn">Del</button>
+                    <button class="btn">8</button>
+                    <button class="btn">5</button>
+                    <button class="btn">2</button>
+                    <button class="btn">*</button>
                 </div>
-                <div class="box">
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
+                <div class="box2">
+                    <button class="btn">%</button>
+                    <button class="btn">9</button>
+                    <button class="btn">6</button>
+                    <button class="btn">3</button>
+                    <button class="btn" id="equal">=</button>
                 </div>
-                <div class="box">
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
+                <div class="box3">
+                    <button class="last">/</button>
+                    <button class="last">x</button>
+                    <button class="last">-</button>
+                    <button class="last" id="inc">+</button>
                 </div>
         </div>
     </div>
     
+
+    <script>
+        document.getElementsByClassName("last").onclick=function(){
+         let val=document.getElementById("inp").value
+         console.log(val)
+        }
+    </script>
 </body>
 </html>
