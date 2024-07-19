@@ -91,13 +91,14 @@
         #inp{
             height:100%;
             width: 100%;
+            font-size: 50px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="screen">
-            <input type="number" id="inp" disabled>
+            <input type="text" id="inp" disabled>
         </div>
         <div class="operators">
                 <div class="box">
@@ -132,9 +133,27 @@
     
 
     <script>
-        document.getElementsByClassName("last").onclick=function(){
-         let val=document.getElementById("inp").value
-         console.log(val)
+        let a=document.querySelectorAll("button");
+        let b=document.querySelector("input");
+         for(let i of a){
+           i.onclick= function(){
+           if (i.innerText == "=")
+              {
+                let val = b.value
+                b.value = eval(val)       
+              }
+            else if (i.innerText == "AC"){
+                b.value=" "
+            }
+            else if (i.innerText == "Del"){
+                b.value= b.value.slice(0,-1)
+            }
+            
+           else(
+               b.value +=i.innerText
+            )
+            
+         }
         }
     </script>
 </body>
