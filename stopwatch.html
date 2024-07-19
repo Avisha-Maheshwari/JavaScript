@@ -93,12 +93,16 @@
                 let a=setInterval(()=>{
                 sec++
                 s.innerText=sec
+                let secstr=sec;
+                let hrstr=hour;
+                let minstr=min;
                 if(sec== 60)
-                {
+                {             
                 min++
                 m.innerText=min
                 sec =0
                 }
+                
 
                 if(min == 60)
                 {
@@ -106,6 +110,12 @@
                     h.innerText = hour
                     min=0
                 }
+
+               
+                if(secstr<10){
+                    secstr="0"+secstr
+                }
+
 
 
                 document.getElementById("pause").onclick=function(){

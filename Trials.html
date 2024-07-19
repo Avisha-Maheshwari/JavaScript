@@ -28,17 +28,37 @@
     
     
         
-        let counter=0;
-        function incrementFunction(){
-            counter=counter+1;
-            console.log(counter);
-            countOnHtml.textContent=counter
-        }
-        let element=document.querySelector("#mybutton");
-        let countOnHtml=document.querySelector("#counting")
+        // let counter=0;
+        // function incrementFunction(){
+        //     counter=counter+1;
+        //     console.log(counter);
+        //     countOnHtml.textContent=counter
+        // }
+        // let element=document.querySelector("#mybutton");
+        // let countOnHtml=document.querySelector("#counting")
 
-        element.addEventListener("click",incrementFunction)
+        // element.addEventListener("click",incrementFunction)
 
+
+
+        let counter=0
+        let a=setInterval(()=>{
+            counter=counter+2
+            if(counter==100){
+                clearInterval(a)
+            }
+            else{
+                console.log(counter)
+            }
+           
+
+
+        },100)
+
+        setTimeout(function(){
+            console.log("hello")
+        },2000)
+        
     
     
     </script>
