@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="1" type="text" placeholder="name">
+    <input class="1" type="number" placeholder="age">
+    <input class="1" type="text" placeholder="state">
+    <input class="1" type="number" placeholder="phone no.">
+    <input class="1" type="text" placeholder="email">
+    <button id="btn">Submit</button>
+    
+    <script>
+       
+document.querySelector("button").onclick=function(){
+    let a=document.getElementsByClassName("1");
+    // for(let i=0;i<a.length;i++){
+    //     console.log(a[i].value)
+    // }
+
+    for(let i of a){
+        console.log(i.value)
+    }
+   
+}
+    </script>
+</body>
+</html>

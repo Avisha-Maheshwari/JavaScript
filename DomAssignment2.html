@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            border:2px solid black ;
+            justify-content: center;
+            align-items:center;
+            width: 900px;
+            height: 600px;
+        }
+        .box1{
+            display: flex;
+            justify-content: center;
+            /* margin-top: 20px; */
+            padding: 5px;
+            margin: 5px;
+
+        }
+        input{
+            padding: 5px;
+        }
+        .boxes{
+            display: flex;
+            flex-wrap: wrap;
+            width: 440px;
+            height: 210px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+        .b{
+            border: 3px solid black;
+            width: 100px;
+            height: 100px;
+            margin-top: 2px;
+            /* height: 50px; */
+
+        }
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <input class="inp" id="color" placeholder="Enter your color name">
+            <input class="inp" id="div" placeholder="select ypur div">
+            <button class="submit" id="btn">Submit</button>
+        </div>
+        <div class="boxes">
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+        </div>
+        
+    </div>
+
+
+    <script>
+
+        let a=document.querySelector("#color").value
+        let b=document.querySelector("#div").value
+        document.getElementById("btn").onclick=function(){
+            
+            b.style.backgroundColor=a
+        }
+
+    </script>
+</body>
+</html>

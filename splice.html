@@ -7,9 +7,20 @@
 </head>
 <body>
     <script>
-        let a=[1000,200,3000,40,50,60,70,90,158,966,458,63]
-        a.splice(0,3)
+        let a="10,20,30,40,50,60,70"
+        // a.splice(0,3)
         console.log(a)
+
+        let b=a.split(",");          //split is used to convert string into array
+        console.log(b)
+
+        console.log(b.join(""))      //join is used to convert array into string
+
+        let x=[10,20,30,['true','false',['n','m','c'],'false'],60,70]         
+        console.log(x.flat(3))         //flat is used to convert 2-dimensional array into 1-D array
+                                      //x.flat(2)-->3D ko 1D me convert krna
     </script>
 </body>
 </html>
+
+3 3 2 2 0
