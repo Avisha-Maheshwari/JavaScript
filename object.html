@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// let obj1={
+//             id:101,
+//             fname:"Avisha",
+//             lname:"Maheshwari",
+//             Age:20,
+//             city:"Jaipur",
+//             Mobile:4599865446,
+//             skills:['Java','python','html','css']
+//             Fullname:function(){
+//                 console.log(this.fname,this.lname)
+//             },
+//             marks:{
+//                 physics:88,
+//                 chemistry:90,
+//                 maths:95
+//             }
+//         }
+
+
+//         console.log(obj)
+//         console.log(obj.fname)
+//         console.log(obj["fname"])
+//         console.log(obj)
+//         console.log(obj)
+
+
+        let array_objects=[
+        {
+            id:101,
+            fname:"Avisha",
+            lname:"Maheshwari",
+            Age:20,
+            city:"Jaipur",
+            Mobile:4599865446,
+            skills:['Java','python','html','css'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:88,
+                chemistry:90,
+                maths:95
+            }
+        },
+
+
+        {
+            id:102,
+            fname:"b",
+            lname:"b",
+            Age:20,
+            city:"mumbai",
+            Mobile:4599865446,
+            skills:['Java','C','html','css'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:88,
+                chemistry:45,
+                maths:23
+            }
+        },
+
+
+        {
+            id:103,
+            fname:"C",
+            lname:"C",
+            Age:60,
+            city:"CHENNAI",
+            Mobile:45909798,
+            skills:['Java','js','html','css'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:86,
+                chemistry:80,
+                maths:57
+            }
+        },
+
+
+        {
+            id:104,
+            fname:"d",
+            lname:"d",
+            Age:87,
+            city:"jsdhkfj",
+            Mobile:4592893496,
+            skills:['Java','css'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:38,
+                chemistry:60,
+                maths:85
+            }
+        },
+
+
+        {
+            id:105,
+            fname:"e",
+            lname:"e",
+            Age:56,
+            city:"Jjhjr",
+            Mobile:459986987,
+            skills:['html','css'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:87,
+                chemistry:99,
+                maths:44
+            }
+        },
+
+        {
+            id:106,
+            fname:"f",
+            lname:"f",
+            Age:57,
+            city:"reerfg",
+            Mobile:9235092797,
+            skills:['Java','css','php'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:38,
+                chemistry:80,
+                maths:85
+            }
+        },
+
+        {
+            id:107,
+            fname:"g",
+            lname:"g",
+            Age:45,
+            city:"kJAOIN",
+            Mobile:8734898349,
+            skills:['Java','css','php','c++'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:38,
+                chemistry:30,
+                maths:55
+            }
+        },
+
+        {
+            id:108,
+            fname:"h",
+            lname:"h",
+            Age:34,
+            city:"bjnr",
+            Mobile:9812983297,
+            skills:['Java','php'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:38,
+                chemistry:60,
+                maths:85
+            }
+        },
+
+        {
+            id:109,
+            fname:"i",
+            lname:"i",
+            Age:47,
+            city:"rergg",
+            Mobile:902380923,
+            skills:['Java','css','php','react'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:38,
+                chemistry:36,
+                maths:85
+            }
+        },
+
+        {
+            id:110,
+            fname:"j",
+            lname:"j",
+            Age:18,
+            city:"bglr",
+            Mobile:434634608,
+            skills:['Java','css','php','html'],
+            Fullname:function(){
+                console.log(this.fname,this.lname)
+            },
+            marks:{
+                physics:98,
+                chemistry:90,
+                maths:99
+            }
+        }
+    ]
+
+    // for(let i of array_objects){
+    //     console.log(i.id,i.fname,i.lname,i.Age,i.city)
+    // }
+
+
+    // for(let i of array_objects){
+    //     if(i.Age>18){                               //wrong
+    //         console.log(i.array_objects)
+    //     }
+    // }
+
+
+    let a=array_objects.filter((item)=>(item.Age>18));
+    console.log(a)
+
+
+    // let x = array_objects.filter((item)=>(item.marks.maths+item.marks.physics+item.marks.chemistry)/3>75);
+    // console.log(x)
+
+    // let x= array_objects.reduce(per()) 
+    // console.log(x)                                      //wrong
+    // function per(){
+    //     for(i in array_objects){
+    //         let marks=i.marks
+    //         marks=marks+i
+    //         p=marks/3
+    //         return p
+    //     }
+    // }
+
+
+
+        
+    </script>
+</body>
+</html>

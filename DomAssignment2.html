@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>color-box</title>
     <style>
         body{
             display: flex;
@@ -59,18 +59,18 @@
     <div class="container">
         <div class="box1">
             <input class="inp" id="color" placeholder="Enter your color name">
-            <input class="inp" id="div" placeholder="select ypur div">
+            <input class="inp" id="div" placeholder="select y0ur div">
             <button class="submit" id="btn">Submit</button>
         </div>
         <div class="boxes">
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
+            <div class="b" id="1">1</div>
+            <div class="b" id="2">2</div>
+            <div class="b" id="3">3</div>
+            <div class="b" id="4">4</div>
+            <div class="b" id="5">5</div>
+            <div class="b" id="6">6</div>
+            <div class="b" id="7">7</div>
+            <div class="b" id="8">8</div>
         </div>
         
     </div>
@@ -78,13 +78,31 @@
 
     <script>
 
-        let a=document.querySelector("#color").value
-        let b=document.querySelector("#div").value
-        document.getElementById("btn").onclick=function(){
-            
-            b.style.backgroundColor=a
-        }
+        // let a=document.querySelector("#color").value
+        // let b=document.querySelector("#div").value
+        // document.getElementById("btn").onclick=function(){
 
+        //     b.style.backgroundColor=a
+        
+
+
+        document.querySelector("#btn").onclick = function(){
+            let color = document.querySelector("#color").value;
+            let div = document.querySelector("#div").value;
+            document.querySelector("#color").value = ''
+            document.querySelector("#div").value = ''
+            
+            let all_div = document.querySelectorAll(".b");
+            
+            for(let i of all_div)
+            {
+                if(i.id==div)
+                { 
+                    i.style.backgroundColor = color;
+                }    
+   
+            }
+}
     </script>
 </body>
 </html>

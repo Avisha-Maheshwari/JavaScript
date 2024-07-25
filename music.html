@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Playlist</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            border: 1px black;
+            width: 50%;
+            
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .box button{
+            padding: 10px;
+            margin: 10px;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box">
+        <audio  src="" controls></audio>
+        <br><br>
+        <button id="1">audio1</button>
+        <button id="2">audio2</button>
+        <button id="3">audio3</button>
+    </div>
+    <script>
+        let b= document.querySelector("audio")
+
+        function PlayMusic(id){
+            b.src= `audio${id}.mp3`
+            b.play()
+        }
+        document.querySelectorAll("button").onclick = function(){
+            console.log("hello")
+        }
+
+
+        
+    </script>
 </body>
 </html>
