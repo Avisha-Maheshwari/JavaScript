@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //=====>CLOUSERS<======(inner call karenge tab uske environment ke bhi sare elements access ho jate hai...isliye hi jab call to inner hua h outer ke through bt a and b bhi access ho gaye hai nahinto ans ko print kareyenge to fir to inner function as it is return ho jayega)
+        function outer(){
+            let a=10;
+            let b=20;
+            function inner(){
+                console.log(a+b)
+            }          
+            return inner;  
+        }
+        let ans=outer();
+        ans()
+
+
+        // =====>CALLBACK FUNCTION<=====(ek function ke andr dusre function ko call krna ya pass krna as a parameter)
+        function output(x,y,z){
+            z(x,y)
+        }    
+        function sum(a,b){
+            console.log(a,b)
+        }
+        output(10,20,sum)
+
+
+        function x(i){
+            i();
+        }
+        function y(){
+            console.log("In Y function")
+        }
+        x(y)
+
+
+        //=======>LOOPS<=====
+
+        let arr=[10,20,30,40,50,60];
+
+        for(let i in arr){
+            console.log(arr[i])
+        }
+
+        // arr.forEach(item)=>{
+        //     Console.log(items)
+        // }
+
+
+        //======>ARRAY METHODS<======(push,pop,unshift,shift)
+        let p=[10,20,30,40,50,60,70,80];
+        p.push(90);                         //pushes new element at the last index
+        console.log(p)
+        p.pop()                             //pops the element from the last index
+        console.log(p)
+        p.unshift("avisha")                 //unshift is used to insert the element at the start index
+        console.log(p)
+        p.shift()                            //shift is used to remove the element from the start index
+        console.log(p)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>
