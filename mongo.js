@@ -17,3 +17,7 @@ const main =async()=> {
     await getdata();
 };
 main();
+
+
+//server jis jageh pr launch hota hai usko port klaha jata hai.
+//const app = express();        mtlb properties of express has been transferred into app
