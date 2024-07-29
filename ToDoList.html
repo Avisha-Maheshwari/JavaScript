@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            align-items: center;
+            margin:auto ;
+        }
+        input{
+            /* margin-left: 30%; */
+            height: 40px;
+            width: 300px;
+            border: 3px solid black;
+        }
+        #add{
+            height: 40px;
+            width: 60px;
+
+        }
+        .todo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .todo button {
+            margin-left: 10px;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>TO-DO LIST</h1>
+    <div>
+    <input type="text" placeholder="Add a new task">
+    <button id="add">Add</button>
+</div>
+    <div id="todo-list"></div>
+</div>
+                                                                            
+    <script>
+        document.querySelector("button").onclick = function() {
+            let a = document.querySelector("input").value;
+            document.querySelector("input").value = '';
+            document.querySelector("input").focus();
+
+            let todo = document.createElement("div");
+            todo.classList.add("todo");
+
+            let heading = document.createElement("span");
+            heading.innerHTML = a;
+
+            let complete = document.createElement("button");
+            complete.innerText = "Complete";
+            complete.onclick = function() {
+                heading.classList.toggle("completed");
+            };
+
+            let del = document.createElement("button");
+            del.innerText = "Delete";
+            del.onclick = function() {
+                todo.remove();
+            };
+
+            todo.append(heading);
+            todo.append(complete);
+            todo.append(del);
+            document.getElementById("todo-list").append(todo);
+        }
+    </script>
+</body>
+</html>
